@@ -2,17 +2,12 @@ const Blockchain = require('../lib/blockchain.js');
 
 const salchichain = new Blockchain();
 
-console.log("== Blockchain vacia ==");
-console.log(salchichain);
+const ALICE = "ALICE";
+const BOB = "BOB";
 
-console.log("Rellenando con valores...");
-salchichain.createNewBlock(2389,'OIUOEREDHKHKD','78s97d4x6dsf');
-salchichain.createNewBlock(2389,'OIUOEREDHKHKD','78s97d4x6dsf');
-salchichain.createNewBlock(2389,'OIUOEREDHKHKD','78s97d4x6dsf');
+console.log("Sending transaction from ALICE to BOB");
+console.log(salchichain.createNewTransaction(ALICE, BOB));
 
+console.log("Sending transaction from BOB to ALICE");
+console.log(salchichain.createNewTransaction(BOB, ALICE));
 
-console.log("== Blockchain con valores ==");
-console.log(salchichain);
-
-console.log("== Obteniendo el ultimo valor (debe coincidir con el anterior) ==");
-console.log(salchichain.getLastBlock());
