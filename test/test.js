@@ -1,4 +1,4 @@
-const Blockchain = require('./blockchain.js');
+const Blockchain = require('../lib/blockchain.js');
 
 const salchichain = new Blockchain();
 
