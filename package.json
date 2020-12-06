@@ -4,12 +4,15 @@
   "description": "Custom Blockchain made in JS/TS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node dev/test.js"
   },
   "author": "Ruben",
   "repository": {
     "type": "git",
     "url": "https://github.com/rubcv/custom-blockchain-js.git"
-},
-  "license": "ISC"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.10"
+  }
 }
