@@ -1,2 +1,2 @@
 # custom-blockchain-js
-Custom Blockchain made in JS/TS
+Custom Blockchain made in JS
