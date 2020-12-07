@@ -2,6 +2,9 @@ const Blockchain = require('../lib/blockchain.js');
 
 const salchichain = new Blockchain();
 
+console.log("Blockchain and genesis Block only");
+console.log(salchichain);
+
 const ALICE = "ALICE";
 const BOB = "BOB";
 
@@ -26,4 +29,4 @@ console.log(block);
 
 
 console.log("Searching tx_1...");
-console.log(salchichain.getTransaction(tx_1.tx_id, tx_1.block_id - 1));
+console.log(salchichain.getTransaction(tx_1.tx_id, tx_1.block_id));
