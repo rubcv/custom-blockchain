@@ -7,13 +7,18 @@ console.log(salchichain);
 
 const ALICE = "ALICE";
 const BOB = "BOB";
+const tx_json = {
+    "Transaction" : 1,
+    "TestData" : true,
+    "ping" : "pong"
+}
 
 console.log("Sending transaction from ALICE to BOB");
-const tx_1 = salchichain.createNewTransaction(ALICE, BOB);
+const tx_1 = salchichain.createNewTransaction(ALICE, BOB, tx_json);
 console.log(tx_1);
 
 console.log("Sending transaction from BOB to ALICE");
-const tx_2 = salchichain.createNewTransaction(BOB, ALICE);
+const tx_2 = salchichain.createNewTransaction(BOB, ALICE, tx_json);
 console.log(tx_2);
 
 console.log("Creating new block");
