@@ -1,8 +1,10 @@
 const { time } = require('console');
 const sha256 = require('sha256');
 
-
-class Blockchain {
+module.exports = class Blockchain {
+    newTransactions: any[];
+    lastBlockHash: string;
+    chain: any;
 
     constructor() {
         this.newTransactions = []; // Se guardan las transacciones antes de guardarlas en el bloque
@@ -26,7 +28,6 @@ class Blockchain {
             transactions: this.newTransactions,
             hash: this.lastBlockHash,
         };
-
         this.newTransactions = [];
         this.chain.push(newBlock);
 
@@ -78,9 +79,4 @@ class Blockchain {
 
         return tx_result;
     }
-
-
-
 }
-
-module.exports = Blockchain;
